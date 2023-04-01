@@ -4,7 +4,7 @@ import { gsap, TweenMax } from "gsap";
 import { SplitText } from "gsap/dist/SplitText";
 import scrollToElement from "scroll-to-element";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import video from "../video/top_video.mp4";
+import video from "../video/zada480.mp4";
 import "../css/styles.scss";
 import { useInView } from "react-intersection-observer";
 import videoProjector from "../images/videoprojector.svg";
