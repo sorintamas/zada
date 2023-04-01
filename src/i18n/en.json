@@ -1,0 +1,33 @@
+{
+    "translation": {
+       "header": {
+            "about": "About Zada",
+            "activities": "Activities",
+            "gallery": "Photo gallery",
+            "facilities": "Facilities",
+            "contact": "Contact"
+       },
+       "about": {
+            "title": "About Zada",
+            "content": "The ZADA Nature Lounge cabin is located 10 km from Cluj-Napoca, on the Feleacu hill, at the edge of Cluj's Faget River. It is divided into two levels: on the ground floor it has a large living room with an extendable sofa, a kitchen equipped with everything you need and a bathroom with a shower. Upstairs are the 3 bedrooms and another bathroom."
+       },
+       "activities": {
+            "title": "Activities",
+            "content": "Adrenalin Park is open in the summer, just 500m from the cottage. In winter, the Feleacu ski area is open, 5 km from the cottage. Right after our fence, the Fagetul Clujului Natura 2000 Site begins, with many trails through the forest; mountain bike trails. An hour's walk away is the Moara de Vant zoo park and Micesti lake, where you can fish."
+       },
+       "gallery": {
+            "title": "Photo gallery"
+       },
+       "facilities": {
+            "title": "Facilities",
+            "heater": "electric heater",
+            "projector": "videoprojector (Netflix, Digi)",
+            "opticFiber": "optic fiber",
+            "bbq": "BBQ",
+            "oven": "oven",
+            "playground": "kids playground",
+            "boardgames": "boardgames",
+            "foosball": "foosball table"
+       }
+    }
+}

@@ -1,0 +1,52 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Sorin\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add yet-another-react-lightbox
+
+PATH: 
+  C:\Users\Sorin\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Sorin\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\Sorin\AppData\Local\Programs\Python\Python310;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Users\Sorin\AppData\Local\Microsoft\WindowsApps;C:\Users\Sorin\AppData\Local\Programs\Python\Python310;C:\Program Files\heroku\bin;C:\Users\Sorin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Sorin\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  18.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, copyfile 'C:\Users\Sorin\AppData\Local\Yarn\Cache\v6\npm-exenv-1.2.2-2ae78e85d9894158670b03d47bec1f03bd91bb9d-integrity\node_modules\exenv\package.json' -> 'D:\practice\gatsby\zada-nature\node_modules\exenv\package.json'
+
+npm manifest: 
+  {
+    "name": "zada-nature",
+    "version": "1.0.0",
+    "private": true,
+    "description": "zada-nature",
+    "keywords": [
+      "gatsby"
+    ],
+    "scripts": {
+      "develop": "gatsby develop",
+      "start": "gatsby develop",
+      "build": "gatsby build",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean"
+    },
+    "dependencies": {
+      "gatsby": "^5.7.0",
+      "gatsby-plugin-sass": "^6.7.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-images-viewer": "^1.7.1",
+      "react-intersection-observer": "^9.4.3",
+      "react-photo-album": "^2.0.3",
+      "react-responsive-carousel": "^3.2.23",
+      "sass": "^1.59.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

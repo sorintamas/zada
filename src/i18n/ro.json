@@ -1,0 +1,33 @@
+{
+    "translation": {
+       "header": {
+            "about": "Despre Zada",
+            "activities": "Activitati in zona",
+            "gallery": "Galerie foto",
+            "facilities": "Facilitati",
+            "contact": "Contact"
+       },
+       "about": {
+            "title": "Despre Zada",
+            "content": "Cabana ZADA Nature Lounge este situata la 10 km de Cluj-Napoca, pe dealul Feleacu, la marginea Fagetului Clujului. Este impartita pe doua niveluri: la parter dispune de un living mare cu canapea extensibila, o bucatarie echipata cu tot ce trebuie si o baie cu dus. La etaj sunt cele 3 dormitoare si inca o baie."
+       },
+       "activities": {
+            "title": "Activitati in zona",
+            "content": "Vara este deschis Adrenalin Park, la doar 500m de cabana. Iarna e deschisa partia de ski Feleacu, la 5km de cabana. Chiar dupa gardul nostru incepe Sit Natura 2000 Fagetul Clujului, cu multe trasee prin padure; trasee mountain bike. La o ora de mers pe jos se afla parcul zoo Moara de Vant si lacul Micesti, unde se poate pescui."
+       },
+       "gallery": {
+            "title": "Galerie foto"
+       },
+       "facilities": {
+            "title": "Facilitati",
+            "heater": "incalzire cu convectoare electrice",
+            "projector": "videoproiector (Netflix, Digi)",
+            "opticFiber": "fibra optica",
+            "bbq": "BBQ",
+            "oven": "cuptor si plita",
+            "playground": "loc de joaca pentru copii",
+            "boardgames": "board games",
+            "foosball": "masa de foosball"
+       }
+    }
+}

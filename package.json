@@ -1,0 +1,31 @@
+{
+  "name": "zada-nature",
+  "version": "1.0.0",
+  "private": true,
+  "description": "zada-nature",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.7.0",
+    "gatsby-plugin-anchor-links": "^1.2.1",
+    "gatsby-plugin-sass": "^6.7.0",
+    "gsap": "npm:@gsap/business@^3.11.5",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
+    "react-intersection-observer": "^9.4.3",
+    "react-photo-album": "^2.0.3",
+    "sass": "^1.59.3",
+    "scroll-to-element": "^2.0.3",
+    "yet-another-react-lightbox": "^3.1.0"
+  }
+}
