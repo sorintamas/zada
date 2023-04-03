@@ -39,7 +39,7 @@ const Index = (props) => {
     gsap.registerPlugin(SplitText);
   }, []);
 
-  // return <Example />;
+  if (!gsap) return <>Loading ...</>;
 
   return (
     <div className="outer-main-wrapper">
@@ -477,30 +477,35 @@ const Section = (props) => {
     const splitText = new SplitText(sectionRef.current, {
       type: "words",
     });
-    const tween = gsap.from(splitText.words, {
-      opacity: 0,
-      x: position === "left" ? -100 : 100,
-      duration: 1,
-      stagger: 0.02,
-      // scale: 0,
-      // rotationX: 90,
-    });
-    timeline.current.add(tween);
+    if (splitText && splitText.words) {
+      const tween = gsap.from(splitText.words, {
+        opacity: 0,
+        x: position === "left" ? -100 : 100,
+        duration: 1,
+        stagger: 0.02,
+        // scale: 0,
+        // rotationX: 90,
+      });
+      timeline.current.add(tween);
 
-    const tweenImg = gsap.from(imageRef.current, {
-      opacity: 0,
-      x: position === "left" ? 200 : -200,
-      duration: 1,
-    });
+      const tweenImg = gsap.from(imageRef.current, {
+        opacity: 0,
+        x: position === "left" ? 200 : -200,
+        duration: 1,
+      });
 
-    const tweenImgMobil = gsap.from(imageRefMobil.current, {
-      opacity: 0,
-      x: position === "left" ? 200 : -200,
-      duration: 1,
-    });
+      const tweenImgMobil = gsap.from(
+        imageRefMobil.current,
+        {
+          opacity: 0,
+          x: position === "left" ? 200 : -200,
+          duration: 1,
+        }
+      );
 
-    timeline.current.add(tweenImg, 0.2);
-    timeline.current.add(tweenImgMobil, 0.2);
+      timeline.current.add(tweenImg, 0.2);
+      timeline.current.add(tweenImgMobil, 0.2);
+    }
   }, []);
 
   React.useEffect(() => {
@@ -513,7 +518,7 @@ const Section = (props) => {
     }
   }, [inView]);
 
-  if (!inView) return null;
+  // if (!inView) return null;
 
   return (
     <div
