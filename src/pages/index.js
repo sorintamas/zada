@@ -17,30 +17,18 @@ import header from "../images/header.webp";
 import oven from "../images/oven.png";
 import larch from "../images/larch.svg";
 import hiking from "../images/hiking.svg";
-import facebook from "../images/facebook.png";
-import insta from "../images/insta.png";
-import whatsapp from "../images/whatsapp.webp";
+import facebook from "../images/facebook.svg";
+import insta from "../images/insta.svg";
+import whatsapp from "../images/whatsapp.svg";
 import email from "../images/email.svg";
 import { PhotoGallery } from "../components/PhotoGallery";
 import { i18n } from "../i18n";
 import { useTranslation, Trans } from "react-i18next";
-import carret from "../images/down_carret.png";
+import carret from "../images/down_carret.svg";
 import burger from "../images/burger.svg";
-
-import { Example } from "../components/Example";
 
 import ro from "../images/ro.png";
 import en from "../images/en.png";
-
-const callbackWhenClickingOutsideOfTarget = (
-  event,
-  target,
-  cb
-) => {
-  if (!target.contains(event.target)) {
-    cb();
-  }
-};
 
 const Index = (props) => {
   const { t, i18n } = useTranslation();
@@ -250,7 +238,7 @@ const LanguageSelector = (props) => {
         >
           <span>{i18n.language}</span>
           <img src={languageIcon} />
-          <img src={carret} />
+          <img src={carret} className="carret-img" />
         </div>
         {languageListIsVisible ? (
           <LanguageOptions
@@ -276,14 +264,11 @@ const LanguageOptions = (props) => {
     );
 
     if (!targetElement) {
-      console.log("element not found");
       return;
     }
 
     if (targetElement.contains(event.target)) {
-      console.log("click inside the DIV");
     } else {
-      console.log("click outside the DIV");
       onClickHandler();
     }
   }, []);
@@ -370,8 +355,8 @@ const BurgerMenu = (props) => {
   const { items, menuIsVisible, menuIsVisibleHandler } =
     props;
 
-  // const [isMenuVisible, setIsMenuVisible] =
-  //   React.useState(false);
+  const [isMenuVisible, setIsMenuVisible] =
+    React.useState(false);
 
   const eventListener = React.useCallback((event) => {
     const targetElement = document.querySelector(
@@ -379,20 +364,16 @@ const BurgerMenu = (props) => {
     );
 
     if (!targetElement) {
-      console.log("element not found");
       return;
     }
 
     if (targetElement.contains(event.target)) {
-      console.log("click inside the DIV");
     } else {
-      console.log("click outside the DIV");
       menuIsVisibleHandler(false);
     }
   }, []);
 
   React.useEffect(() => {
-    console.log(`isMenuVisible = ${menuIsVisible}`);
     if (menuIsVisible) {
       document.addEventListener("click", eventListener);
     } else {
@@ -466,13 +447,14 @@ const Map = () => {
 const Section = (props) => {
   const { ref, inView } = useInView({
     // triggerOnce: true,
-    threshold: 1,
+    threshold: 0.7,
   });
 
   const previousState = React.useRef(false);
 
   const sectionRef = React.useRef(null);
   const imageRef = React.useRef(null);
+  const imageRefMobil = React.useRef(null);
   const sectionContentRef = React.useRef(null);
 
   const {
@@ -511,14 +493,19 @@ const Section = (props) => {
       duration: 1,
     });
 
+    const tweenImgMobil = gsap.from(imageRefMobil.current, {
+      opacity: 0,
+      x: position === "left" ? 200 : -200,
+      duration: 1,
+    });
+
     timeline.current.add(tweenImg, 0.2);
+    timeline.current.add(tweenImgMobil, 0.2);
   }, []);
 
   React.useEffect(() => {
     if (inView && !previousState.current) {
-      console.log(previousState.current);
       previousState.current = true;
-      console.log("should play ...");
 
       timeline.current.play();
     } else {
@@ -541,7 +528,10 @@ const Section = (props) => {
       >
         <div className="section-title-wrapper">
           <div className="section-title">{title}</div>
-          <div className="mobile-icon-wrapper">
+          <div
+            className="mobile-icon-wrapper"
+            ref={imageRefMobil}
+          >
             <img src={icon} />
           </div>
         </div>
@@ -570,11 +560,11 @@ const Facilities = (props) => {
 
   const { ref, inView } = useInView({
     // triggerOnce: true,
-    threshold: 1,
+    threshold: 0.2,
   });
 
   const tween = React.useRef(null);
-  const previousState = React.useRef(null);
+  const previousState = React.useRef(false);
 
   React.useLayoutEffect(() => {
     tween.current = gsap.from(sectionRef.current, {
@@ -590,9 +580,7 @@ const Facilities = (props) => {
 
   React.useEffect(() => {
     if (inView && !previousState.current) {
-      console.log(previousState.current);
       previousState.current = true;
-      console.log("should play ...");
 
       tween.current.play();
     } else {
@@ -641,10 +629,10 @@ const Facility = (props) => {
 
   React.useEffect(() => {
     if (shouldPlay) {
-      console.log("gallery playing");
       tween.current.play();
     }
   }, [shouldPlay]);
+
   return (
     <div className="facility-wrapper" ref={facilityRef}>
       <div className="facility-icon">
@@ -664,7 +652,7 @@ const Contact = (props) => {
 
   const { ref, inView } = useInView({
     // triggerOnce: true,
-    threshold: 1,
+    threshold: 0.7,
   });
 
   React.useLayoutEffect(() => {
@@ -672,7 +660,7 @@ const Contact = (props) => {
       opacity: 0,
       duration: 0.5,
       stagger: 0.02,
-      delay: 0.5,
+      // delay: 0.5,
       // scale: 0,
       // rotationX: 90,
     });
@@ -681,9 +669,7 @@ const Contact = (props) => {
 
   React.useEffect(() => {
     if (inView && !previousState.current) {
-      console.log(previousState.current);
       previousState.current = true;
-      console.log("should play ...");
 
       tween.current.play();
     } else {
@@ -720,7 +706,7 @@ const ContactItem = (props) => {
   const imgTween = React.useRef(null);
   const sectionRef = React.useRef(null);
   const imgRef = React.useRef(null);
-  const previousState = React.useRef(null);
+  const previousState = React.useRef(false);
 
   React.useLayoutEffect(() => {
     gsap.registerPlugin(SplitText);

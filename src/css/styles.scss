@@ -63,14 +63,14 @@ body {
     video {
       max-height: 75vh;
       background: transparent;
-      max-width: 970px;
+      max-width: 875px;
     }
 
     .video-vignette {
       position: absolute;
       width: 100%;
-      height: 100%;
-      max-width: 975px;
+      height: 102%;
+      max-width: 875px;
       //   background: red;
       //   box-shadow: inset 0 0px 1000px #1b1b1b;
       box-shadow: 0 0 25px 40px #1b1b1b inset;
@@ -185,7 +185,12 @@ body {
       // width: 15px;
       object-fit: cover;
 
-      border-radius: 10px;
+      // border-radius: 10px;
+
+      &.carret-img {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 
@@ -486,6 +491,14 @@ video {
   }
 }
 
+@media (max-width: 750px) {
+  .contact-details-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
 @media (max-width: 700px) {
   html,
   body {
@@ -508,12 +521,6 @@ video {
 
   .facilities-wrapper {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .contact-details-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
   }
 }
 
