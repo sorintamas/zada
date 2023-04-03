@@ -506,6 +506,8 @@ const Section = (props) => {
       timeline.current.add(tweenImg, 0.2);
       timeline.current.add(tweenImgMobil, 0.2);
     }
+
+    document.querySelector(`#${anchor}`).style.opacity = 1;
   }, []);
 
   React.useEffect(() => {
@@ -518,13 +520,12 @@ const Section = (props) => {
     }
   }, [inView]);
 
-  // if (!inView) return null;
-
   return (
     <div
       className="section-grid section"
       id={anchor}
       ref={ref}
+      style={{ opacity: 0 }}
     >
       <div
         className={`${position}-section-wrapper section-wrapper ${
