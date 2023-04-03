@@ -31,10 +31,10 @@ import ro from "../images/ro.png";
 import en from "../images/en.png";
 
 const Index = (props) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   React.useLayoutEffect(() => {
-    i18n.init({ lng: "ro" });
+    // i18n.init({ lng: "ro" });
 
     gsap.registerPlugin(SplitText);
   }, []);
@@ -512,6 +512,8 @@ const Section = (props) => {
       previousState.current = false;
     }
   }, [inView]);
+
+  if (!inView) return null;
 
   return (
     <div

@@ -204,9 +204,8 @@ export const PhotoGallery = (props) => {
 
   React.useEffect(() => {
     if (inView && !previousState.current) {
-      console.log(previousState.current);
       previousState.current = true;
-      console.log("should play ...");
+
       tween.current.play();
       // timeline.current.play();
     } else {
@@ -277,7 +276,6 @@ const Thumbnail = (props) => {
 
   React.useEffect(() => {
     if (shouldPlay) {
-      console.log("gallery playing");
       tween.current.play();
     }
   }, [shouldPlay]);
