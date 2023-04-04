@@ -70,7 +70,7 @@ body {
       position: absolute;
       width: 100%;
       height: 102%;
-      max-width: 875px;
+      max-width: 880px;
       //   background: red;
       //   box-shadow: inset 0 0px 1000px #1b1b1b;
       box-shadow: 0 0 25px 40px #1b1b1b inset;
@@ -409,11 +409,11 @@ video {
       cursor: pointer;
 
       &:hover {
-        opacity: 0.8;
+        opacity: 0.8 !important;
       }
 
       &:active {
-        opacity: 0.6;
+        opacity: 0.6 !important;
       }
     }
   }
